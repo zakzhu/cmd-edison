@@ -19,7 +19,7 @@
   - Fedora
   - MacOS
   - Ubuntu
-- ## **Dependencies:**
+- **Dependencies:**
 
 ## Installation
 
