@@ -3,21 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-13 15:18:28
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-16 01:34:17
-
-# SUBPROCESS MODULE USAGE:
-# subprocess.run(
-#     args, *, stdin=None, input=None, stdout=None,
-#     stderr=None, shell=False, cwd=None,
-#     timeout=None, check=False, encoding=None, errors=None,
-#     env=None, universal_newlines=None)
-
-# subprocess.Popen(
-#     args, bufsize=-1, executable=None, stdin=None,
-#     stdout=None, stderr=None, preexec_fn=None, close_fds=True,
-#     shell=False, cwd=None, env=None, universal_newlines=None,
-#     startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False,
-#     pass_fds=(), *, encoding=None, errors=None, text=None)
+# @Last Modified time: 2020-11-16 01:40:50
 
 import shlex
 import subprocess
