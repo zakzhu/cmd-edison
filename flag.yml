@@ -2,4 +2,7 @@ arguments:
   required:
     -
   optional:
+    - help
+    - check
+    - verbose
     -
