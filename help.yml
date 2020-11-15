@@ -1,0 +1,14 @@
+help:
+  description:
+  usage: |-
+
+  long_options:
+    - help:
+        value: null
+        msg: "show this help message and exit"
+    - check:
+        value: null
+        msg: "don't make any changes; instead, try to predict some of the changes that may occur"
+    - verbose:
+        value: null
+        msg: "verbose mode (-vvv for more, -vvvv to enable connection debugging)"
