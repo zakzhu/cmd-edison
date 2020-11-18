@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-18 10:38:40
+# @Last Modified time: 2020-11-18 14:58:13
 
 import argparse
 
@@ -16,16 +16,17 @@ import argparse
 
 # ArgumentParser.add_argument(name or flags...[, action][, nargs][, type][, choices][, required][, help][, metavar])
 
-# ArgumentParser.add_argument_group(title=None)
-
 # ArgumentParser.add_mutually_exclusive_group(required=False)
 
+# parser.exit(status=rc)
 
-parser = argparse.ArgumentParser()
 
-parser.add_argument()
-
-parser.exit(status=rc)
+def parser(required_flag, optional_flag, help_msg):
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--%s" % ,
+        help=help_msg,
+    )
 
 
 def main():
