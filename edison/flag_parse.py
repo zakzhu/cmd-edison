@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-18 14:58:13
+# @Last Modified time: 2020-11-18 16:05:48
 
 import argparse
 
@@ -14,15 +14,21 @@ import argparse
 
 # ArgumentParser.add_argument(name or flags...[, action][, nargs][, const][, default][, type][, choices][, required][, help][, metavar][, dest])
 
-# ArgumentParser.add_argument(name or flags...[, action][, nargs][, type][, choices][, required][, help][, metavar])
-
-# ArgumentParser.add_mutually_exclusive_group(required=False)
+# ArgumentParser.add_argument(
+# name or flags...
+# [, type]
+# [, choices]
+# [, required]
+# [, help]
+# [, metavar])
 
 # parser.exit(status=rc)
 
 
-def parser(required_flag, optional_flag, help_msg):
-    parser = argparse.ArgumentParser()
+def parser(required_flag, optional_flag, help_msg, description, ver):
+    parser = argparse.ArgumentParser(description=description)
+    vers = '%(progs)s {}'.format(ver)
+    parser.add_argument('--version', action='version', version='%s' % vers)
     parser.add_argument(
         "--%s" % ,
         help=help_msg,

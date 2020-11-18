@@ -1,8 +1,24 @@
-arguments:
-  required:
-    -
-  optional:
-    - help
-    - check
-    - verbose
-    -
+version: "1.0.0"
+description: ""
+required:
+  - flag1:
+      name:
+      type:
+      choice:
+        -
+      required:
+      help:
+      metavar:
+  - flag2:
+      # ...
+optional:
+  - flag1:
+      name:
+      type:
+      choice:
+        -
+      required:
+      help:
+      metavar:
+  - flag2:
+      # ...
