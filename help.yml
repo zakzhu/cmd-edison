@@ -1,7 +1,7 @@
 help:
-  description:
   usage: |-
 
+  description:
   long_options:
     - help:
         value: null
