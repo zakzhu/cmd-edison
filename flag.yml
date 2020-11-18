@@ -1,24 +1,17 @@
 version: "1.0.0"
 description: ""
-required:
+flags:
   - flag1:
       name:
       type:
-      choice:
+      choices:
         -
-      required:
+      required: True
       help:
-      metavar:
   - flag2:
-      # ...
-optional:
-  - flag1:
       name:
       type:
-      choice:
+      choices:
         -
-      required:
+      required: False
       help:
-      metavar:
-  - flag2:
-      # ...
