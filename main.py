@@ -3,20 +3,19 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 03:36:22
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-16 10:43:33
+# @Last Modified time: 2020-11-19 14:49:50
 
 import argparse
 
-from edison import command, path, yaml_conf
+from edison import command, path
+
+# parser.exit(status=rc)
 
 workdir = path.dirname(__file__)
 
-flag_file = path.name(workdir, "flag.yml")
-help_file = path.name(workdir, "help.yml")
-
 
 def main():
-    print(flag_file, help_file)
+    pass
 
 
 if __name__ == "__main__":

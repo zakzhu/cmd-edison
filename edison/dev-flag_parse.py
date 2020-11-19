@@ -3,31 +3,17 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-19 14:17:59
+# @Last Modified time: 2020-11-19 14:49:57
 
 import argparse
 
-from . import yaml_conf
 
-# ArgumentParser.add_argument(
-# name or flags...
-# [, type]
-# [, choices]
-# [, required]
-# [, help]
-
-# parser.exit(status=rc)
-
-flag_dict = yaml_conf.get_data("../flag.yml")
-flags = flag_dict["flags"]
-
-
-def parser():
+def parser(flag_dict):
     parser = argparse.ArgumentParser(description=flag_dict["description"])
     vers = "%(progs)s {}".format(flag_dict["version"])
     parser.add_argument("--version", action="version", version="%s" % vers)
     parser.add_argument("--quiet", action="store_true", help="")
-    for flag in flags:
+    for flag in flag_dict["flags"]:
 
         def add_flag(is_required=True):
             try:
