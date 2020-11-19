@@ -1,17 +1,46 @@
 version: "1.0.0"
-description: ""
+description: test
 flags:
   - flag1:
-      name:
-      type:
+      name: fone
+      type: bool
       choices:
-        -
+        - True
+        - False
       required: True
-      help:
+      help: flag1
+
   - flag2:
-      name:
-      type:
+      name: ftwo
+      type: bool
       choices:
-        -
+        - True
+        - False
       required: False
-      help:
+      help: flag2
+
+  - flag3:
+      name: fthree
+      choices:
+        - a
+        - b
+      required: True
+      help: flag3
+
+  - flag4:
+      name: ffour
+      choices:
+        - a
+        - b
+      required: False
+      help: flag4
+
+  - flag5:
+      name: ffive
+      required: True
+      help: flag5
+
+  - flag6:
+      name: fsix
+      required: False
+      help: flag6
