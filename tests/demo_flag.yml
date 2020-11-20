@@ -1,5 +1,5 @@
 version: "1.0.0"
-description: test
+description: This is a demo about description
 flags:
   - flag1:
       name: fone
