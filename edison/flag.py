@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 10:53:04
+# @Last Modified time: 2020-11-20 11:33:41
 
 import argparse
 
@@ -15,7 +15,7 @@ def parse(flag_dict):
     parser.add_argument(
         "-C",
         "--check",
-        action="store_false",
+        action="store_true",
         help="dry run mode",
     )
     parser.add_argument(
@@ -81,8 +81,14 @@ def main():
     parser = parse(flag_dict)
     parser.print_help()
     args = parser.parse_args()
-    print(args)
-    print(type(vars(args)))
+    args_dict = vars(args)
+    for i in ["check", "quiet", "verbose"]:
+        args_dict.pop(i)
+
+    print(args_dict)
+
+    # for i in args_dict:
+    #     print(args_dict[i])
 
 
 if __name__ == "__main__":
