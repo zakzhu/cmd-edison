@@ -3,15 +3,18 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 15:18:15
+# @Last Modified time: 2020-11-20 17:56:02
 
 import argparse
 
 
 def parse(flag_dict):
     parser = argparse.ArgumentParser(description=flag_dict["description"])
-    vers = "%(progs)s {}".format(flag_dict["version"])
-    parser.add_argument("--version", action="version", version="%s" % vers)
+    parser.add_argument(
+        "--version",
+        action="version",
+        version="%(prog)s {}".format(flag_dict["version"]),
+    )
     parser.add_argument(
         "-C",
         "--check",
@@ -37,8 +40,9 @@ def parse(flag_dict):
             if flag["type"] == "bool":
                 parser.add_argument(
                     "--%s" % flag["name"],
-                    type=bool,
-                    choices=[True, False],
+                    # type=bool,
+                    # choices=[True, False],
+                    action="store_true",
                     required=is_required,
                     help=flag["help"],
                 )

@@ -1,21 +1,9 @@
 version: "1.0.0"
 description: test
 flags:
-  - flag1:
-      name: fone
-      type: bool
-      choices:
-        - True
-        - False
-      required: True
-      help: flag1
-
   - flag2:
       name: ftwo
       type: bool
-      choices:
-        - True
-        - False
       required: False
       help: flag2
 
