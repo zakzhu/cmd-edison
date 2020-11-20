@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 03:36:22
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 09:47:00
+# @Last Modified time: 2020-11-20 09:58:27
 
 
 from edison import command, flag, path, yaml_conf
@@ -12,7 +12,6 @@ from edison import command, flag, path, yaml_conf
 
 workdir = path.dirname(__file__)
 playbook_dir = path.name(workdir, "playbook")
-main_playbook = path.name(playbook_dir, "site.yml")
 flag_yaml = path.name(workdir, "flag.yml")
 flag_dict = yaml_conf.get_data(flag_yaml)
 parser = flag.parse(flag_dict)

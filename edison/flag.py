@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 09:40:33
+# @Last Modified time: 2020-11-20 10:53:04
 
 import argparse
 
@@ -13,7 +13,16 @@ def parse(flag_dict):
     vers = "%(progs)s {}".format(flag_dict["version"])
     parser.add_argument("--version", action="version", version="%s" % vers)
     parser.add_argument(
-        "--quiet", action="store_true", help="suppress non-error messages"
+        "-C",
+        "--check",
+        action="store_false",
+        help="dry run mode",
+    )
+    parser.add_argument(
+        "-q",
+        "--quiet",
+        action="store_true",
+        help="suppress non-error messages",
     )
     parser.add_argument(
         "-v",
@@ -71,6 +80,9 @@ def main():
     #     # print(flag.values()[0]["name"])
     parser = parse(flag_dict)
     parser.print_help()
+    args = parser.parse_args()
+    print(args)
+    print(type(vars(args)))
 
 
 if __name__ == "__main__":
