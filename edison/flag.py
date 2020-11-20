@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 09:15:19
+# @Last Modified time: 2020-11-20 09:40:33
 
 import argparse
 
@@ -16,7 +16,11 @@ def parse(flag_dict):
         "--quiet", action="store_true", help="suppress non-error messages"
     )
     parser.add_argument(
-        "-v", "--verbose", action="count", help="verbose mode (-vv for more)"
+        "-v",
+        "--verbose",
+        action="count",
+        default=0,
+        help="verbose mode (-vv for more),",
     )
 
     def add_flag(flag, is_required=True):

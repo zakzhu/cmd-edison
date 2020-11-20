@@ -3,13 +3,13 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-13 15:18:28
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-19 15:11:08
+# @Last Modified time: 2020-11-20 09:31:47
 
 import shlex
 import subprocess
 
 
-def run(cmd, workdir, silent=False):
+def run(cmd, workdir, quiet=False):
     args = shlex.split(cmd)
     command = subprocess.run(
         args,
@@ -23,7 +23,7 @@ def run(cmd, workdir, silent=False):
     )
     rc = command.returncode
     rc_msg = "RETURN CODE: {}".format(rc)
-    if silent:
+    if quiet:
         if rc != 0:
             print(command.stdout)
             print(rc_msg)
@@ -36,8 +36,8 @@ def run(cmd, workdir, silent=False):
 def main():
     cmd = "ansible-playbook test.yml"
     path = "/tmp"
-    # run(cmd, path, silent=True)
-    run(cmd, path, silent=False)
+    # run(cmd, path, quiet=True)
+    run(cmd, path, quiet=False)
 
 
 if __name__ == "__main__":
