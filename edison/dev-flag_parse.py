@@ -3,17 +3,20 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-19 18:02:19
+# @Last Modified time: 2020-11-20 09:11:09
 
 import argparse
 
 
-def parser(flag_dict):
+def parse(flag_dict):
     parser = argparse.ArgumentParser(description=flag_dict["description"])
     vers = "%(progs)s {}".format(flag_dict["version"])
     parser.add_argument("--version", action="version", version="%s" % vers)
     parser.add_argument(
         "--quiet", action="store_true", help="suppress non-error messages"
+    )
+    parser.add_argument(
+        "-v", "--verbose", action="count", help="verbose mode (-vv for more)"
     )
 
     def add_flag(flag, is_required=True):
@@ -62,7 +65,8 @@ def main():
     #     # for i in v:
     #     # print(i)
     #     # print(flag.values()[0]["name"])
-    parser(flag_dict).print_help()
+    parser = parse(flag_dict)
+    parser.print_help()
 
 
 if __name__ == "__main__":
