@@ -24,3 +24,7 @@
     - name: flag6
       debug:
         msg: "{{ fsix | default('UNDEFINED') }}"
+
+    - file:
+        path: "/tmp/hellohello"
+        state: touch
