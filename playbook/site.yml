@@ -1,0 +1,30 @@
+---
+- name: Demo Playbook
+  hosts: localhost
+  remote_user: root
+  gather_facts: yes
+  force_handlers: no
+  tasks:
+    - name: flag1
+      debug:
+        msg: "{{ fone }}"
+
+    - name: flag2
+      debug:
+        msg: "{{ ftwo | default('two') }}"
+
+    - name: flag3
+      debug:
+        msg: "{{ fthree }}"
+
+    - name: flag4
+      debug:
+        msg: "{{ ffour | default('four') }}"
+
+    - name: flag5
+      debug:
+        msg: "{{ ffive }}"
+
+    - name: flag6
+      debug:
+        msg: "{{ fsix | default('six') }}"
