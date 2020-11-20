@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 03:36:22
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 15:43:12
+# @Last Modified time: 2020-11-20 15:58:23
 
 
 from edison import command, flag, path, yaml_conf
@@ -54,9 +54,8 @@ def playbook_run(args, cmd, playbook_dir, parser):
 
 
 def main():
-    workdir = path.dirname(__file__)
-    playbook_dir = path.name(workdir, "playbook")
-    flag_yaml = path.name(workdir, "flag.yml")
+    playbook_dir = path.name(__file__, "playbook")
+    flag_yaml = path.name(__file__, "flag.yml")
     flag_dict = yaml_conf.get_data(flag_yaml)
 
     parser = flag.parse(flag_dict)
