@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 11:33:41
+# @Last Modified time: 2020-11-20 14:18:33
 
 import argparse
 
@@ -87,8 +87,14 @@ def main():
 
     print(args_dict)
 
-    # for i in args_dict:
-    #     print(args_dict[i])
+    undefined_args = []
+    for i in args_dict:
+        # print(args_dict[i])
+        if args_dict[i] is None:
+            undefined_args.append(i)
+    for i in undefined_args:
+        args_dict.pop(i)
+    print(args_dict)
 
 
 if __name__ == "__main__":
