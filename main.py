@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 03:36:22
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 14:44:45
+# @Last Modified time: 2020-11-20 15:07:00
 
 
 from edison import command, flag, path, yaml_conf
@@ -52,6 +52,11 @@ else:
         cmd = 'ansible-playbook -C -e "%s" site.yml' % extra_vars
     else:
         cmd = 'ansible-playbook -e "%s" site.yml' % extra_vars
+
+if args.quiet:
+    command.run(cmd, playbook_dir, quiet=True)
+else:
+    command.run(cmd, playbook_dir)
 
 
 def main():
