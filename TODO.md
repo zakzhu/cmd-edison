@@ -1,0 +1,3 @@
+- review and test again
+- 删除无用的测试代码
+- edit readme
