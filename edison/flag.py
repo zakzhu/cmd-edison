@@ -3,13 +3,16 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-23 11:05:25
+# @Last Modified time: 2020-11-23 11:13:15
 
 import argparse
 
 
 def parse(flag_dict):
-    parser = argparse.ArgumentParser(description=flag_dict["description"])
+    parser = argparse.ArgumentParser(
+        description=flag_dict["description"],
+        allow_abbrev=False,
+    )
     parser.add_argument(
         "--version",
         action="version",
