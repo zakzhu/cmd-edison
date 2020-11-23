@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-23 10:55:49
+# @Last Modified time: 2020-11-23 11:05:25
 
 import argparse
 
@@ -13,7 +13,6 @@ def parse(flag_dict):
     parser.add_argument(
         "--version",
         action="version",
-        # version="%(prog)s {}".format(flag_dict["version"]),
         version=f"%(prog)s {flag_dict['version']}",
     )
     parser.add_argument(
@@ -40,10 +39,7 @@ def parse(flag_dict):
         try:
             if flag["type"] == "bool":
                 parser.add_argument(
-                    # "--%s" % flag["name"],
                     f"--{flag['name']}",
-                    # type=bool,
-                    # choices=[True, False],
                     action="store_true",
                     required=is_required,
                     help=flag["help"],
@@ -52,7 +48,6 @@ def parse(flag_dict):
             try:
                 parser.add_argument(
                     f"--{flag['name']}",
-                    # "--%s" % flag["name"],
                     choices=flag["choices"],
                     required=is_required,
                     help=flag["help"],
@@ -60,7 +55,6 @@ def parse(flag_dict):
             except KeyError:
                 parser.add_argument(
                     f"--{flag['name']}",
-                    # "--%s" % flag["name"],
                     required=is_required,
                     help=flag["help"],
                 )
