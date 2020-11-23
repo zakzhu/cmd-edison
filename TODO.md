@@ -1,6 +1,4 @@
 - review and test again
-- 删除无用的测试代码
 - edit readme
 - 导出 requirements.txt
 - centos7 环境测试
-- .gitignore file
