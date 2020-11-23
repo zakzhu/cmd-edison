@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-13 15:18:28
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 17:52:22
+# @Last Modified time: 2020-11-23 10:41:04
 
 import shlex
 import subprocess
@@ -21,17 +21,16 @@ def run(cmd, workdir, quiet=False):
         encoding="utf-8",
         universal_newlines=True,
     )
+
     rc = command.returncode
-    rc_msg = "RETURN CODE: {}".format(rc)
+    rc_msg = f"RETURN CODE: {rc}"
+    out_msg = f"\n>> {cmd}\n" f"{command.stdout}\n" f"{rc_msg}\n"
+
     if quiet:
         if rc != 0:
-            print("\n> %s" % cmd)
-            print(command.stdout)
-            print(rc_msg)
+            print(out_msg)
     else:
-        print("\n> %s" % cmd)
-        print(command.stdout)
-        print(rc_msg)
+        print(out_msg)
     return rc
 
 

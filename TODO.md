@@ -3,3 +3,4 @@
 - edit readme
 - 导出 requirements.txt
 - centos7 环境测试
+- .gitignore file

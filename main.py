@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 03:36:22
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-20 17:50:18
+# @Last Modified time: 2020-11-23 09:50:58
 
 
 from edison import command, flag, path, yaml_conf
@@ -27,19 +27,19 @@ def get_extra_vars(args_dict):
 def playbook_cmd(args, extra_vars):
     if args.verbose >= 2:
         if args.check:
-            cmd = 'ansible-playbook -vv -C -e "%s" site.yml' % extra_vars
+            cmd = f'ansible-playbook -vv -C -e "{extra_vars}" site.yml'
         else:
-            cmd = 'ansible-playbook -vv -e "%s" site.yml' % extra_vars
+            cmd = f'ansible-playbook -vv -e "{extra_vars}" site.yml'
     elif args.verbose >= 1:
         if args.check:
-            cmd = 'ansible-playbook -v -C -e "%s" site.yml' % extra_vars
+            cmd = f'ansible-playbook -v -C -e "{extra_vars}" site.yml'
         else:
-            cmd = 'ansible-playbook -v -e "%s" site.yml' % extra_vars
+            cmd = f'ansible-playbook -v -e "{extra_vars}" site.yml'
     else:
         if args.check:
-            cmd = 'ansible-playbook -C -e "%s" site.yml' % extra_vars
+            cmd = f'ansible-playbook -C -e "{extra_vars}" site.yml'
         else:
-            cmd = 'ansible-playbook -e "%s" site.yml' % extra_vars
+            cmd = f'ansible-playbook -e "{extra_vars}" site.yml'
     return cmd
 
 
@@ -47,7 +47,6 @@ def playbook_run(args, cmd, playbook_dir, parser):
     if args.quiet:
         rc = command.run(cmd, playbook_dir, quiet=True)
         parser.exit(status=rc)
-
     else:
         rc = command.run(cmd, playbook_dir)
         parser.exit(status=rc)
