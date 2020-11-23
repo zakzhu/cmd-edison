@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-23 10:44:23
+# @Last Modified time: 2020-11-23 10:55:49
 
 import argparse
 
@@ -73,37 +73,3 @@ def parse(flag_dict):
             add_flag(flag, False)
 
     return parser
-
-
-def main():
-    import yaml_conf
-
-    file = "/root/Programs/python/v3/cmd-edison/flag.yml"
-    flag_dict = yaml_conf.get_data(file)
-    # print(flag_dict["flags"])
-    # for flag in flag_dict["flags"]:
-    #     print(list(flag.values())[0]["name"])
-    #     # for i in v:
-    #     # print(i)
-    #     # print(flag.values()[0]["name"])
-    parser = parse(flag_dict)
-    parser.print_help()
-    args = parser.parse_args()
-    args_dict = vars(args)
-    for i in ["check", "quiet", "verbose"]:
-        args_dict.pop(i)
-
-    print(args_dict)
-
-    undefined_args = []
-    for i in args_dict:
-        # print(args_dict[i])
-        if args_dict[i] is None:
-            undefined_args.append(i)
-    for i in undefined_args:
-        args_dict.pop(i)
-    print(args_dict)
-
-
-if __name__ == "__main__":
-    main()

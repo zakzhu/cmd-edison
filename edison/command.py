@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-13 15:18:28
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-23 10:41:04
+# @Last Modified time: 2020-11-23 10:55:34
 
 import shlex
 import subprocess
@@ -32,14 +32,3 @@ def run(cmd, workdir, quiet=False):
     else:
         print(out_msg)
     return rc
-
-
-def main():
-    cmd = "ansible-playbook test.yml"
-    path = "/tmp"
-    # run(cmd, path, quiet=True)
-    run(cmd, path, quiet=False)
-
-
-if __name__ == "__main__":
-    main()
