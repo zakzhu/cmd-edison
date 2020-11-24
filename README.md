@@ -25,6 +25,11 @@
 ## Installation
 
 ```bash
+git clone https://github.com/zakzhu/cmd-edison.git
+```
+
+```bash
+cd cmd-edison
 pip3 install -r requirements.txt
 ```
 
@@ -38,7 +43,7 @@ pip3 install -r requirements.txt
    cp Your-Playbook playbook/
    ```
 
-2.  2
+2.  Edit config *flag.yml* 
 
    ```bash
    vim flag.yml
@@ -46,7 +51,18 @@ pip3 install -r requirements.txt
 
 ## Examples
 
+There is a sample in directory tests/. You could copy the sample files to corresponding directories.
 
+> ```bash
+> cp tests/site.yml.sample playbook/
+> cp tests/flag.yml.sample flag.yml
+> ```
+
+Execute `python main.py --help`, and you would see below:
+
+![](https://gitee.com/zakzhu/md-images/raw/master/cmd-edison/cmd-edison_sample-help.png)
+
+Also you could test more features from this sample.
 
 ## Thanks
 

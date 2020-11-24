@@ -1,34 +1,34 @@
 version: "1.0.0"
-description: Below is a sample
+description: Brief description
 flags:
-  - flag2:
-      name: ftwo
+  - flag1:
+      name: fone
       type: bool
       required: False
+      help: flag1
+
+  - flag2:
+      name: ftwo
+      choices:
+        - a
+        - b
+      required: True
       help: flag2
 
   - flag3:
       name: fthree
       choices:
-        - a
-        - b
-      required: True
+        - 1
+        - 2
+      required: False
       help: flag3
 
   - flag4:
       name: ffour
-      choices:
-        - a
-        - b
-      required: False
+      required: True
       help: flag4
 
   - flag5:
       name: ffive
-      required: True
-      help: flag5
-
-  - flag6:
-      name: fsix
       required: False
-      help: flag6
+      help: flag5
