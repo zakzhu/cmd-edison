@@ -7,7 +7,9 @@
 [![release][shield-release]][info-release]
 [![prs welcome][shield-prs]][info-prs]
 
-Cmd-Edison can help you easily generate linux-style command line tools. You only need to write an ansible playbook and set flag.yml, and then a new command is born.
+Cmd-Edison can help you easily generate linux-style command line tools. 
+
+You only need to write an ansible playbook and set flag.yml, and then a new command is born.
 
 [TOC]
 
