@@ -3,7 +3,7 @@
 # @Author: Zak Zhu
 # @Date:   2020-11-16 11:01:19
 # @Last Modified by:   Zak Zhu
-# @Last Modified time: 2020-11-24 09:15:03
+# @Last Modified time: 2020-11-24 15:24:38
 
 import argparse
 
@@ -32,7 +32,7 @@ def parse(flag_dict):
         "--verbose",
         action="count",
         default=0,
-        help="verbose mode (-vv for more),",
+        help="verbose mode (-vv for more)",
     )
 
     def add_flag(flag, is_required=True):
