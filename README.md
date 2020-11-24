@@ -1,12 +1,13 @@
 # Cmd-Edison
 
 <!-- [![build status][shield-build]][info-build] -->
+
 [![gitter room][shield-gitter]][info-gitter]
 [![license][shield-license]][info-license]
 [![release][shield-release]][info-release]
 [![prs welcome][shield-prs]][info-prs]
 
-> Project description
+Cmd-Edison can help you easily generate linux-style command line tools. You only need to write an ansible playbook and set flag.yml, and then a new command is born.
 
 [TOC]
 
@@ -35,19 +36,19 @@ pip3 install -r requirements.txt
 
 ## Usage
 
-1. Copy your playbook to directory *playbook/*
+1. Copy your playbook to directory _playbook/_
 
-   > **NOTE**: The main playbook should be named *site.yml* !   
+> **NOTE**: The main playbook should be named _site.yml_ !
 
-   ``` bash
-   cp Your-Playbook playbook/
-   ```
+```bash
+cp Your-Playbook playbook/
+```
 
-2.  Edit config *flag.yml* 
+2. Edit config _flag.yml_
 
-   ```bash
-   vim flag.yml
-   ```
+```bash
+vim flag.yml
+```
 
 ## Examples
 
