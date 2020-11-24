@@ -16,6 +16,7 @@
     - name: flag4
       debug:
         msg: "{{ ffour | default('UNDEFINED') }}"
+      # failed_when: yes
 
     - name: flag5
       debug:

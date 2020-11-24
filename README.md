@@ -1,8 +1,7 @@
 # Cmd-Edison
 
 <!-- [![build status][shield-build]][info-build] -->
-<!-- [![gitter room][shield-gitter]][info-gitter] -->
-
+[![gitter room][shield-gitter]][info-gitter]
 [![license][shield-license]][info-license]
 [![release][shield-release]][info-release]
 [![prs welcome][shield-prs]][info-prs]
@@ -20,23 +19,40 @@
   - MacOS
   - Ubuntu
 - **Dependencies:**
+  - Python >= 3.7
+  - PyYAML >= 5.1.2
 
 ## Installation
 
+```bash
+pip3 install -r requirements.txt
+```
+
 ## Usage
+
+1. Copy your playbook to directory *playbook/*
+
+   > **NOTE**: The main playbook should be named *site.yml* !   
+
+   ``` bash
+   cp Your-Playbook playbook/
+   ```
+
+2.  2
+
+   ```bash
+   vim flag.yml
+   ```
 
 ## Examples
 
-## Why?
 
-> If your project does something already catered for by another project or is particularly complex, it’s useful to provide some justification.
 
 ## Thanks
 
 The following excellent people helped massively:
 
 - [Rowan Manning](https://rowanmanning.com)
--
 
 ## License
 
